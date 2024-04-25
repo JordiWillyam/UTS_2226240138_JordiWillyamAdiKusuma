@@ -1,0 +1,75 @@
+<!--- 
+Nama : Jordi Willyam Adi Kusuma
+NPM : 2226240138
+UTS PAW I    
+--->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulasi Pembayaran THR</title>
+
+<script>
+    function hitungGaji(){
+    var gajiPokok = parseInt(document.getElementById("gajiPokok").value);
+    var tunjanganTetap = parseInt(document.getElementById("tunjanganTetap").value);
+    var masaKerja= parseInt(document.getElementById("masaKerja").value);
+    
+    
+    var totalGaji = gajiPokok + tunjanganTetap;
+    var thr = 0;
+    if (masakerja => 12){
+        thr = totalGaji;
+    }else{
+        thr = (masaKerja/12)*totalGaji;
+    }
+
+    var pph = 0;
+    if (totalGaji > 4500000){
+        pph = totalGaji*(5/100);
+    }else{
+        pph = 0;
+    }
+    var totalPembayaran = thr + pph;
+
+    //Menampilkan Hasil
+    document.getElementById('hasil').innerHTML = 'Gaji Pokok: ' + gajiPokok + '<br>' + 
+    'Tunjangan Tetap: ' + tunjanganTetap + '<br>' + 
+    'Masa Kerja: ' + masaKerja +'<br>' + 
+    'Total Gaji: ' + totalGaji + '<br>' + 
+    'THR : ' + thr +'<br>' + 
+    'PPH : ' + pph + '<br>' + 
+    'Total Pembayaran: ' + totalPembayaran;
+
+
+    }
+
+</script>
+</head>
+<body>
+    <p>
+        <label for="gajiPokok">Gaji Pokok: </label>
+        <input type="text" id="gajiPokok" name="gajiPokok"><br>
+        <label for="tunjanganTetap">Tunjangan Tetap: </label>
+        <input type="text" id="tunjanganTetap" name="tunjanganTetap"><br>
+        <label for="masaKerja">Masa Kerja: </label>
+        <input type="text" id="masaKerja" name="masaKerja"><br>
+
+        <button type="button" onclick="hitungGaji()" >Hitung Gaji</button>
+    </p>
+    <div id ='hasil'></div>
+    <div id ='hasil2'></div>
+<br>
+<br>
+    <p>Soal Nomor 5</p>
+    <h1>Look Into YourSelf</h1>
+    <p>
+        <b><u>Look Into yourself,</u></b><br>
+        Release your heart free<br>
+        Look into yourself,<br>
+        andbe the master of your destiny
+    </p>
+</body>
+
+</html>
